@@ -5,12 +5,14 @@
             "check_spoof",
             "https://github.com/orchechik/check_spoof",
             "",
+            "",
             ""
         ],
         [
             "Moreira",
             "mountinfo",
             "https://github.com/volatilityfoundation/community3/tree/master/Moreira_Mountinfo/vol3_mountinfo_plugin_files/volatility/framework",
+            "",
             "",
             ""
         ],
@@ -19,12 +21,14 @@
             "netfilter",
             "https://github.com/volatilityfoundation/community3/tree/master/Moreira_Netfilter",
             "",
+            "",
             ""
         ],
         [
             "Stelte",
             "evtx",
             "https://github.com/volatilityfoundation/community3/tree/master/Stelte_Evt",
+            "",
             "",
             ""
         ],
@@ -33,12 +37,14 @@
             "syslog",
             "https://github.com/volatilityfoundation/community3/tree/master/Stelte_Syslog",
             "",
+            "",
             ""
         ],
         [
             "Vergeer",
             "openssh_sessionkeys",
             "https://github.com/fox-it/OpenSSH-Session-Key-Recovery/tree/main/volatility3",
+            "",
             "",
             ""
         ],
@@ -47,6 +53,7 @@
             "vol3xp",
             "https://github.com/memoryforensics1/Vol3xp",
             "",
+            "",
             ""
         ],
         [
@@ -54,12 +61,14 @@
             "volatility3-autoruns",
             "https://github.com/Telindus-CSIRT/volatility3-autoruns",
             "autorun.zip",
-            ""
+            "",
+            "Windows"
         ],
         [
             "kevthehermit",
             "cobaltstrike",
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/cobaltstrike",
+            "",
             "",
             ""
         ],
@@ -68,6 +77,7 @@
             "passwordmanagers",
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/passwordmanagers",
             "",
+            "",
             ""
         ],
         [
@@ -75,14 +85,16 @@
             "pypykatz",
             "https://github.com/skelsec/pypykatz-volatility3",
             "pypykatz.zip",
-            ""
+            "",
+            "Windows"
         ],
         [
             "JP-CERT",
             "Impfuzzy",
             "https://github.com/JPCERTCC/impfuzzy/tree/master/impfuzzy_for_Volatility3",
             "pehash.zip",
-            ""
+            "",
+            "Windows"
         ]
     ]
 }
