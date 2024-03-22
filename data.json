@@ -4,25 +4,25 @@
             "Abyss Watcher",
             "check_ftrace",
             "https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_ftrace.py",
+            "check_ftrace.zip",
             "",
-            "",
-            "linux"
+            "Linux"
         ],
         [
             "Abyss Watcher",
             "check_tracepoints",
             "https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_tracepoints.py",
+            "check_tracepoints.zip",
             "",
-            "",
-            "linux"
+            "Linux"
         ],
         [
             "Abyss Watcher",
             "check_unlinked_modules",
             "https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_unlinked_modules.py",
+            "check_unlinked_modules.zip",
             "",
-            "",
-            "linux"
+            "Linux"
         ],
         [
             "Asaf Eitani",
@@ -30,7 +30,7 @@
             "https://github.com/AsafEitani/ebpf_programs_plugin",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "Aviel Zohar and Or Chechik",
@@ -78,7 +78,7 @@
             "https://github.com/BoB10th-BTC/CryptoScan",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -86,7 +86,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/apisearch.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -94,7 +94,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/imgmalfind.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -102,7 +102,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/pe_parser.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -110,7 +110,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/pte_resolve.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -118,7 +118,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/ptemalfind.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -126,7 +126,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/ptenum.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -134,7 +134,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/simple_pteenum.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "f-block",
@@ -142,7 +142,7 @@
             "https://github.com/f-block/volatility-plugins/blob/main/swap_enum.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "forensicxlab",
@@ -150,7 +150,7 @@
             "https://github.com/forensicxlab/volatility3/blob/feature/ADS/volatility3/framework/plugins/windows/mftscan.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "forensicxlab",
@@ -166,7 +166,7 @@
             "https://github.com/forensicxlab/volatility3/tree/feature/IAT",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "fox-it",
@@ -182,7 +182,7 @@
             "https://github.com/JPCERTCC/impfuzzy/tree/master/impfuzzy_for_Volatility3",
             "pehash.zip",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "kevthehermit",
@@ -238,7 +238,7 @@
             "https://github.com/amir9339/volatility-docker",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "orchechik",
@@ -254,7 +254,7 @@
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/notepad.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "Rifqi Ramadhan",
@@ -262,7 +262,7 @@
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/kusertime.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "Rifqi Ramadhan",
@@ -270,7 +270,7 @@
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/evtxlog.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "Rifqi Ramadhan",
@@ -278,7 +278,7 @@
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/sticky.py",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "Rifqi Ramadhan",
@@ -286,7 +286,7 @@
             "https://github.com/volatilityfoundation/community3/tree/master/Silva_Multi_Yara",
             "",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "skelsec",
@@ -294,7 +294,7 @@
             "https://github.com/skelsec/pypykatz-volatility3",
             "pypykatz.zip",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "skelsec",
@@ -318,7 +318,7 @@
             "https://github.com/Telindus-CSIRT/volatility3-autoruns",
             "autorun.zip",
             "",
-            "windows"
+            "Windows"
         ],
         [
             "Valentin Obst",
@@ -326,7 +326,7 @@
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_graph.py",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "Valentin Obst",
@@ -334,7 +334,7 @@
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listlinks.py",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "Valentin Obst",
@@ -342,7 +342,7 @@
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listmaps.py",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "Valentin Obst",
@@ -350,7 +350,7 @@
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listprocs.py",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "Valentin Obst",
@@ -358,7 +358,7 @@
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listprogs.py",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "Valentin Obst",
@@ -366,7 +366,7 @@
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_lsm.py",
             "",
             "",
-            "linux"
+            "Linux"
         ],
         [
             "Valentin Obst",
@@ -374,7 +374,7 @@
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_netdev.py",
             "",
             "",
-            "linux"
+            "Linux"
         ]
     ]
 }

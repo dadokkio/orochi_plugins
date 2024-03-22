@@ -1,9 +1,9 @@
 # orochi_plugins
 
 ## [Abyss Watcher](https://github.com/Abyss-W4tcher)
-- [🐧]() [check_ftrace](https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_ftrace.py)
-- [🐧]() [check_tracepoints](https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_tracepoints.py)
-- [🐧]() [check_unlinked_modules](https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_unlinked_modules.py)
+- [🐧](check_ftrace.zip) [check_ftrace](https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_ftrace.py)
+- [🐧](check_tracepoints.zip) [check_tracepoints](https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_tracepoints.py)
+- [🐧](check_unlinked_modules.zip) [check_unlinked_modules](https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_unlinked_modules.py)
 
 ## [Asaf Eitani](https://github.com/AsafEitani)
 - [🐧]() [eBPF Programs](https://github.com/AsafEitani/ebpf_programs_plugin)

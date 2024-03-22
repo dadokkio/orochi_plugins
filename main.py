@@ -21,11 +21,11 @@ with open("README.md", "r") as f:
                 elif len(m) == 2:
                     match (m[0]):
                         case "🐧":
-                            os = "linux"
+                            os = "Linux"
                         case "🪟":
-                            os = "windows"
+                            os = "Windows"
                         case "🍏":
-                            os = "mac"
+                            os = "Mac"
                     plugin_name = m[1]
             if m := re.findall(rounded, line):
                 if len(m) == 1:
