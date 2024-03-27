@@ -81,6 +81,22 @@
             "Windows"
         ],
         [
+            "daddycocoaman",
+            "dumpcerts",
+            "https://github.com/daddycocoaman/volplugins/blob/main/plugins/dumpcerts.py",
+            "",
+            "",
+            "Windows"
+        ],
+        [
+            "daddycocoaman",
+            "symcrypt",
+            "https://github.com/daddycocoaman/volplugins/blob/main/plugins/symcrypt.py",
+            "",
+            "",
+            "Windows"
+        ],
+        [
             "f-block",
             "apisearch",
             "https://github.com/f-block/volatility-plugins/blob/main/apisearch.py",

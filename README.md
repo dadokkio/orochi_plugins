@@ -18,6 +18,10 @@
 ## [BoB10th-BTC](https://github.com/BoB10th-BTC)
 -  [🪟]() [CryptoScan](https://github.com/BoB10th-BTC/CryptoScan)
 
+## [daddycocoaman](https://github.com/daddycocoaman)
+- [🪟]() [dumpcerts](https://github.com/daddycocoaman/volplugins/blob/main/plugins/dumpcerts.py)
+- [🪟]() [symcrypt](https://github.com/daddycocoaman/volplugins/blob/main/plugins/symcrypt.py)
+
 ## [f-block](https://github.com/f-block/volatility-plugins)
 -  [🪟]() [apisearch](https://github.com/f-block/volatility-plugins/blob/main/apisearch.py)
 -  [🪟]() [imgmalfind](https://github.com/f-block/volatility-plugins/blob/main/imgmalfind.py)
