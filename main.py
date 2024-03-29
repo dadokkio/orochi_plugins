@@ -7,7 +7,7 @@ rounded = r"\(([^()]*?)\)"
 square = r"\[([^\[\]]*?)\]"
 
 data = []
-with open("README.md", "r") as f:
+with open("README.md", "r", encoding="utf-8") as f:
     for line in f:
         line = line.strip()
         if line.startswith("##"):
