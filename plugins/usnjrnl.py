@@ -58,8 +58,8 @@ FILE_ATTRIBUTES = (
     (0x4000, "ENCRYPTED"),
 )
 
-# Signature for MajorVersion=2, MinorVersion=0 at offset +4 of USN_RECORD_V2
-USN_V2_VER_BYTES = b"\x02\x00\x00\x00"
+# Signature for MajorVersion=2, MinorVersion=0 (+4) and FileNameOffset=60 (+58 -> 50 bytes between)
+USN_V2_REGEX = rb"\x02\x00\x00\x00.{50}\x3c\x00"
 
 
 def _decode_flags(val: int, table: Tuple[Tuple[int, str], ...]) -> str:
@@ -160,7 +160,7 @@ class UsnJrnl(interfaces.plugins.PluginInterface, timeliner.TimeLinerInterface):
         layer = self.context.layers[phys_layer_name]
 
         seen = set()
-        for match_off in layer.scan(self.context, scanners.BytesScanner(USN_V2_VER_BYTES)):
+        for match_off in layer.scan(self.context, scanners.RegExScanner(USN_V2_REGEX)):
             rec_off = match_off - 4
             if rec_off < 0 or (rec_off % 8) != 0:
                 continue

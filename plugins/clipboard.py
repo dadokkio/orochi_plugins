@@ -73,9 +73,17 @@ class Clipboard(interfaces.plugins.PluginInterface):
         kernel_name = self.config["kernel"]
         kernel = self.context.modules[kernel_name]
 
-        for winsta, station_name, session_id in windowstations.WindowStations.scan_window_stations(
-            self.context, self.config_path, kernel_name
-        ):
+        try:
+            stations = list(
+                windowstations.WindowStations.scan_window_stations(
+                    self.context, self.config_path, kernel_name
+                )
+            )
+        except NotImplementedError as excp:
+            vollog.warning(f"Clipboard requires x64 Windows GUI symbols: {excp}")
+            return
+
+        for winsta, station_name, session_id in stations:
             if not (winsta.has_member("pClipBase") and winsta.has_member("cNumClipFormats")):
                 continue
 

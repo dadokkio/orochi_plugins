@@ -85,9 +85,17 @@ class MessageHooks(interfaces.plugins.PluginInterface):
         kernel_name = self.config["kernel"]
         kernel = self.context.modules[kernel_name]
 
-        for winsta, station_name, session_id in windowstations.WindowStations.scan_window_stations(
-            self.context, self.config_path, kernel_name
-        ):
+        try:
+            stations = list(
+                windowstations.WindowStations.scan_window_stations(
+                    self.context, self.config_path, kernel_name
+                )
+            )
+        except NotImplementedError as excp:
+            vollog.warning(f"MessageHooks requires x64 Windows GUI symbols: {excp}")
+            return
+
+        for winsta, station_name, session_id in stations:
             for desktop, desktop_name in winsta.desktops(kernel.symbol_table_name):
                 try:
                     desk_info = desktop.pDeskInfo.dereference()

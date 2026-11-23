@@ -135,9 +135,17 @@ class Screenshot(interfaces.plugins.PluginInterface):
 
         desktops_map: Dict[Tuple[int, str, str], List[Tuple[Tuple[int, int, int, int], str, str, int]]] = defaultdict(list)
 
-        for station_name, desktop_name, window, window_name in windows.Windows.list_windows(
-            self.context, self.config_path, kernel_name
-        ):
+        try:
+            win_list = list(
+                windows.Windows.list_windows(
+                    self.context, self.config_path, kernel_name
+                )
+            )
+        except NotImplementedError as excp:
+            vollog.warning(f"Screenshot requires x64 Windows GUI symbols: {excp}")
+            return
+
+        for station_name, desktop_name, window, window_name in win_list:
             sess_id = window.get_session_id()
             if sess_id is None:
                 continue

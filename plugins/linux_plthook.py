@@ -211,7 +211,7 @@ class PltHook(interfaces.plugins.PluginInterface):
 
     def run(self):
         filter_func = pslist.PsList.create_pid_filter(self.config.get("pid", None))
-        tasks = pslist.PsList.list_processes(
+        tasks = pslist.PsList.list_tasks(
             context=self.context,
             vmlinux_module_name=self.config["kernel"],
             filter_func=filter_func,

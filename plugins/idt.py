@@ -82,10 +82,15 @@ class Idt(interfaces.plugins.PluginInterface):
 
         for cpu_idx, item in enumerate(kpcrs.KPCRs.list_kpcrs(self.context, kernel_name)):
             kpcr = item[0] if isinstance(item, tuple) else item
-            try:
-                idt_base = int(kpcr.IdtBase)
-            except (AttributeError, exceptions.InvalidAddressException):
-                continue
+            idt_base = 0
+            for field in ("IdtBase", "IDT"):
+                if kpcr.has_member(field):
+                    try:
+                        idt_base = int(getattr(kpcr, field))
+                        if idt_base:
+                            break
+                    except exceptions.InvalidAddressException:
+                        pass
             if not idt_base:
                 continue
 

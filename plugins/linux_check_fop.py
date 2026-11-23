@@ -9,7 +9,8 @@ from volatility3.framework.configuration import requirements
 from volatility3.framework.objects import utility
 from volatility3.framework.renderers import format_hints
 from volatility3.framework.symbols import linux
-from volatility3.plugins.linux import lsmod, pslist
+from volatility3.framework.symbols.linux.utilities import modules as linux_modules
+from volatility3.plugins.linux import pslist
 
 vollog = logging.getLogger(__name__)
 
@@ -63,7 +64,7 @@ class CheckFop(interfaces.plugins.PluginInterface):
                 optional=True,
             ),
             requirements.VersionRequirement(
-                name="lsmod", component=lsmod.Lsmod, version=(3, 0, 0)
+                name="linux_modules", component=linux_modules.Modules, version=(3, 0, 0)
             ),
             requirements.VersionRequirement(
                 name="pslist", component=pslist.PsList, version=(4, 0, 0)
@@ -91,14 +92,14 @@ class CheckFop(interfaces.plugins.PluginInterface):
             if not ops_obj.has_member(member):
                 continue
             try:
-                ptr = int(getattr(ops_obj, member))
-            except exceptions.InvalidAddressException:
+                ptr = int(ops_obj.member(attr=member))
+            except (TypeError, ValueError, exceptions.InvalidAddressException):
                 continue
             if not ptr:
                 continue
 
-            mod_name, sym_name = linux.LinuxUtilities.lookup_module_address(
-                kernel, handlers, ptr
+            mod_name, sym_name = linux_modules.Modules.lookup_module_address(
+                self.context, self.config["kernel"], handlers, ptr
             )
             mod_name = mod_name or "UNKNOWN"
             sym_name = sym_name or "UNKNOWN"
@@ -137,10 +138,16 @@ class CheckFop(interfaces.plugins.PluginInterface):
             return
         seen_pdes.add(pde_addr)
 
-        try:
-            name = utility.array_to_string(pde.name) if pde.has_member("name") else ""
-        except exceptions.InvalidAddressException:
-            name = ""
+        name = ""
+        if pde.has_member("name"):
+            try:
+                name_obj = pde.name
+                if hasattr(name_obj, "dereference"):
+                    name = utility.pointer_to_string(name_obj, count=256)
+                else:
+                    name = utility.array_to_string(name_obj)
+            except (ValueError, TypeError, exceptions.InvalidAddressException):
+                name = ""
         full_name = f"{prefix}/{name}".replace("//", "/") if name else prefix
 
         # Kernel < 5.6: proc_fops (file_operations *); Kernel >= 5.6: proc_ops (proc_ops *)
@@ -180,10 +187,18 @@ class CheckFop(interfaces.plugins.PluginInterface):
         kernel = self.context.modules[self.config["kernel"]]
         show_all = self.config.get("all", False)
 
-        mods = lsmod.Lsmod.list_modules(self.context, self.config["kernel"])
-        handlers = linux.LinuxUtilities.generate_kernel_handler_info(
-            self.context, self.config["kernel"], mods
+        mods = linux_modules.Modules.list_modules(self.context, self.config["kernel"])
+        handlers = linux_modules.Modules.mask_mods_list(
+            self.context, kernel.layer_name, mods
         )
+        # Include core kernel text range (_text .. _etext) so built-in kernel handlers resolve properly
+        try:
+            k_start = kernel.object_from_symbol("_text").vol.offset
+            k_end = kernel.object_from_symbol("_etext").vol.offset
+            if k_start and k_end and k_end > k_start:
+                handlers.insert(0, ("kernel", k_start, k_end))
+        except Exception:
+            pass
 
         seen_ops: Set[int] = set()
 
@@ -198,7 +213,7 @@ class CheckFop(interfaces.plugins.PluginInterface):
                 vollog.debug(f"Unable to walk proc_root: {excp}")
 
         # 2. Check file_operations of open file descriptors across running processes
-        for task in pslist.PsList.list_processes(
+        for task in pslist.PsList.list_tasks(
             context=self.context, vmlinux_module_name=self.config["kernel"]
         ):
             try:
