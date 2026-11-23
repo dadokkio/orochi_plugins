@@ -8,6 +8,7 @@ from typing import Iterable, List, Tuple
 
 from volatility3.framework import exceptions, interfaces, renderers
 from volatility3.framework.configuration import requirements
+from volatility3.framework.layers import registry
 from volatility3.framework.renderers import conversion, format_hints
 from volatility3.plugins import timeliner
 from volatility3.plugins.windows.registry import hivelist
@@ -56,7 +57,7 @@ class ShutdownTime(interfaces.plugins.PluginInterface, timeliner.TimeLinerInterf
                         current = struct.unpack("<I", current[:4])[0]
                     if isinstance(current, int):
                         return f"ControlSet{current:03d}"
-        except (KeyError, exceptions.InvalidAddressException, exceptions.RegistryException) as excp:
+        except (KeyError, exceptions.InvalidAddressException, registry.RegistryException) as excp:
             vollog.debug(f"Unable to read Select\\Current: {excp}")
         return "ControlSet001"
 
@@ -77,7 +78,7 @@ class ShutdownTime(interfaces.plugins.PluginInterface, timeliner.TimeLinerInterf
             key_path = f"{control_set}\\Control\\Windows"
             try:
                 win_key = hive.get_key(key_path)
-            except (KeyError, exceptions.InvalidAddressException, exceptions.RegistryException) as excp:
+            except (KeyError, exceptions.InvalidAddressException, registry.RegistryException) as excp:
                 vollog.debug(f"Could not open {key_path} in {hive_name}: {excp}")
                 continue
 

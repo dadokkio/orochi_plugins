@@ -9,6 +9,7 @@ from typing import Iterable, List, Optional, Tuple
 
 from volatility3.framework import exceptions, interfaces, renderers
 from volatility3.framework.configuration import requirements
+from volatility3.framework.layers import registry
 from volatility3.framework.renderers import conversion, format_hints
 from volatility3.plugins import timeliner
 from volatility3.plugins.windows.registry import hivelist
@@ -233,7 +234,7 @@ class ShellBags(interfaces.plugins.PluginInterface, timeliner.TimeLinerInterface
                         created or renderers.NotApplicableValue(),
                     ),
                 )
-        except (exceptions.InvalidAddressException, exceptions.RegistryException) as excp:
+        except (exceptions.InvalidAddressException, registry.RegistryException) as excp:
             vollog.debug(f"Error enumerating values at {reg_path}: {excp}")
 
         # Recurse into matching subkeys ("0", "1", ...)
@@ -250,7 +251,7 @@ class ShellBags(interfaces.plugins.PluginInterface, timeliner.TimeLinerInterface
                     prefix_path=child_prefix,
                     depth=depth + 1,
                 )
-        except (exceptions.InvalidAddressException, exceptions.RegistryException) as excp:
+        except (exceptions.InvalidAddressException, registry.RegistryException) as excp:
             vollog.debug(f"Error enumerating subkeys at {reg_path}: {excp}")
 
     def _generator(self) -> Iterable[Tuple[int, Tuple]]:
@@ -271,7 +272,7 @@ class ShellBags(interfaces.plugins.PluginInterface, timeliner.TimeLinerInterface
             for bag_path in BAGMRU_PATHS:
                 try:
                     bag_key = hive.get_key(bag_path)
-                except (KeyError, exceptions.InvalidAddressException, exceptions.RegistryException):
+                except (KeyError, exceptions.InvalidAddressException, registry.RegistryException):
                     continue
                 yield from self._walk_bagmru(
                     hive_name=hive_name,
