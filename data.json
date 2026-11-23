@@ -386,6 +386,22 @@
         ],
         [
             "orochi_plugins",
+            "clipboard",
+            "https://github.com/dadokkio/orochi_plugins",
+            "clipboard.zip",
+            "[2026-11-23] Extracts Windows clipboard formats and text content from tagWINDOWSTATION structures",
+            "Windows"
+        ],
+        [
+            "orochi_plugins",
+            "idt",
+            "https://github.com/dadokkio/orochi_plugins",
+            "idt.zip",
+            "[2026-11-23] Displays Windows CPU Interrupt Descriptor Table (IDT) entries and flags unknown handlers",
+            "Windows"
+        ],
+        [
+            "orochi_plugins",
             "linux_arp",
             "https://github.com/dadokkio/orochi_plugins",
             "linux_arp.zip",
@@ -399,6 +415,30 @@
             "linux_check_fop.zip",
             "[2026-11-23] Audits Linux file_operations/proc_ops pointers on /proc and open files for rootkit hooks",
             "Linux"
+        ],
+        [
+            "orochi_plugins",
+            "linux_plthook",
+            "https://github.com/dadokkio/orochi_plugins",
+            "linux_plthook.zip",
+            "[2026-11-23] Detects Linux userland ELF64 GOT/PLT hooks pointing to anonymous, unmapped, or suspicious VMAs",
+            "Linux"
+        ],
+        [
+            "orochi_plugins",
+            "linux_route_cache",
+            "https://github.com/dadokkio/orochi_plugins",
+            "linux_route_cache.zip",
+            "[2026-11-23] Extracts IPv4 routing table entries from the Linux kernel FIB trie (init_net)",
+            "Linux"
+        ],
+        [
+            "orochi_plugins",
+            "messagehooks",
+            "https://github.com/dadokkio/orochi_plugins",
+            "messagehooks.zip",
+            "[2026-11-23] Lists Windows desktop message hooks (SetWindowsHookEx) to detect keyloggers and DLL injection",
+            "Windows"
         ],
         [
             "orochi_plugins",
@@ -430,6 +470,14 @@
             "https://github.com/dadokkio/orochi_plugins",
             "token_stealing.zip",
             "[2026-11-23] Detects Windows kernel token stealing and unexpected SYSTEM _TOKEN sharing",
+            "Windows"
+        ],
+        [
+            "orochi_plugins",
+            "usnjrnl",
+            "https://github.com/dadokkio/orochi_plugins",
+            "usnjrnl.zip",
+            "[2026-11-23] Carves and parses NTFS USN_RECORD_V2 journal entries from physical memory",
             "Windows"
         ],
         [

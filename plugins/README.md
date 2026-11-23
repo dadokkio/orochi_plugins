@@ -9,12 +9,18 @@ Each plugin is also packaged at the repository root as a flat Orochi-compatible 
 | Plugin | Volatility 3 Name | OS | Package | Extra Dependencies |
 | --- | --- | --- | --- | --- |
 | [apihooks.py](apihooks.py) | `custom.apihooks.ApiHooks` | Windows | `../apihooks.zip` | `capstone`, `pefile` *(pre-installed in Orochi)* |
+| [clipboard.py](clipboard.py) | `custom.clipboard.Clipboard` | Windows | `../clipboard.zip` | None |
+| [idt.py](idt.py) | `custom.idt.Idt` | Windows | `../idt.zip` | None |
+| [messagehooks.py](messagehooks.py) | `custom.messagehooks.MessageHooks` | Windows | `../messagehooks.zip` | None |
 | [screenshot.py](screenshot.py) | `custom.screenshot.Screenshot` | Windows | `../screenshot.zip` | `pillow` *(pre-installed in Orochi)* |
 | [shellbags.py](shellbags.py) | `custom.shellbags.ShellBags` | Windows | `../shellbags.zip` | None |
 | [shutdowntime.py](shutdowntime.py) | `custom.shutdowntime.ShutdownTime` | Windows | `../shutdowntime.zip` | None |
 | [token_stealing.py](token_stealing.py) | `custom.token_stealing.TokenStealing` | Windows | `../token_stealing.zip` | None |
+| [usnjrnl.py](usnjrnl.py) | `custom.usnjrnl.UsnJrnl` | Windows | `../usnjrnl.zip` | None |
 | [linux_arp.py](linux_arp.py) | `custom.linux_arp.Arp` | Linux | `../linux_arp.zip` | None |
 | [linux_check_fop.py](linux_check_fop.py) | `custom.linux_check_fop.CheckFop` | Linux | `../linux_check_fop.zip` | None |
+| [linux_plthook.py](linux_plthook.py) | `custom.linux_plthook.PltHook` | Linux | `../linux_plthook.zip` | None |
+| [linux_route_cache.py](linux_route_cache.py) | `custom.linux_route_cache.RouteCache` | Linux | `../linux_route_cache.zip` | None |
 
 ---
 
@@ -148,6 +154,75 @@ PID   PPID  Process  Parent        Token Address       Shared With  Assessment
 
 ---
 
+### `clipboard` (`Clipboard`)
+Extracts Windows clipboard format entries (`CF_TEXT`, `CF_UNICODETEXT`, `CF_HDROP`, etc.) and readable text payloads from `tagWINDOWSTATION` structures using `windows.windowstations`.
+
+**Examples:**
+```bash
+vol -p plugins -f memory.raw clipboard.Clipboard
+```
+
+**Example output:**
+```text
+Session  WindowStation  Format          Handle              Object              Size  Data
+1        WinSta0        CF_UNICODETEXT  0xffff8f0123456780  0xffff8f0123456780  42    https://internal.corp/admin?token=...
+```
+
+---
+
+### `idt` (`Idt`)
+Reads the 256 Interrupt Descriptor Table entries from each CPU's `KPCR.IdtBase` (x86 and x64) via `windows.kpcrs` and resolves handler addresses against loaded kernel modules (`windows.modules`).
+
+**Options:**
+- `--hooked-only` — show only IDT entries resolving outside known kernel modules (`UNKNOWN`)
+
+**Examples:**
+```bash
+vol -p plugins -f memory.raw idt.Idt
+vol -p plugins -f memory.raw idt.Idt --hooked-only
+```
+
+**Example output:**
+```text
+CPU  Index  Selector  Handler Address     Module        Status
+0    0x0    0x10      0xfffff80042a1b040  ntoskrnl.exe  OK
+0    0x2e   0x10      0xfffff80099120080  UNKNOWN       SUSPICIOUS (Unknown Module)
+```
+
+---
+
+### `messagehooks` (`MessageHooks`)
+Enumerates Windows desktop message hooks (`SetWindowsHookEx` / `tagHOOK` chains in `tagDESKTOP.pDeskInfo.aphkStart`, e.g. `WH_KEYBOARD`, `WH_KEYBOARD_LL`, `WH_MOUSE`) to detect keyloggers and DLL injection.
+
+**Examples:**
+```bash
+vol -p plugins -f memory.raw messagehooks.MessageHooks
+```
+
+**Example output:**
+```text
+Session  WindowStation  Desktop  Hook Offset         Hook Type       Flags      Function Offset  Module Index  Process       PID
+1        WinSta0        Default  0xffff8f01a0023410  WH_KEYBOARD_LL  HF_GLOBAL  0x12a0           -1            keylog.exe    3412
+```
+
+---
+
+### `usnjrnl` (`UsnJrnl`)
+Carves and validates NTFS `USN_RECORD_V2` journal entries directly from physical memory (no fragile kernel symbol dependencies) and decodes `USN_REASON_*` and `FILE_ATTRIBUTE_*` flags. Implements `TimeLinerInterface`.
+
+**Examples:**
+```bash
+vol -p plugins -f memory.raw usnjrnl.UsnJrnl
+```
+
+**Example output:**
+```text
+Offset       USN       Timestamp                  FileName       MFT Ref  Parent MFT Ref  Reason                   Attributes
+0x1a402180   84920144  2026-11-22 18:10:04+00:00  payload.exe    91823    5               FILE_CREATE|DATA_EXTEND  ARCHIVE
+```
+
+---
+
 ## Linux Plugins
 
 ### `linux_arp` (`Arp`)
@@ -188,6 +263,44 @@ vol -p plugins -f linux.lime linux_check_fop.CheckFop --all
 Source     Target                  Member          Handler Address     Module   Symbol
 procfs     /proc                   iterate_shared  0xffffffffc04a1120  UNKNOWN  UNKNOWN
 open_file  sshd(812) fd=3 /etc/..  read            0xffffffffc04a1480  UNKNOWN  UNKNOWN
+```
+
+---
+
+### `linux_plthook` (`PltHook`)
+Inspects ELF64 `PT_DYNAMIC` → `.got.plt` relocation entries in running Linux processes and flags resolved GOT pointers targeting `<anonymous>`, `<unmapped>`, `/tmp/`, `/dev/shm/`, or `(deleted)` mappings.
+
+**Options:**
+- `--pid <PID [PID ...]>` — filter on specific process IDs
+- `--all` — display all resolved GOT/PLT entries instead of only suspicious ones
+
+**Examples:**
+```bash
+vol -p plugins -f linux.lime linux_plthook.PltHook
+vol -p plugins -f linux.lime linux_plthook.PltHook --pid 812 --all
+```
+
+**Example output:**
+```text
+PID  Process  Binary          Symbol   GOT Address     Target Address  Target Mapping          Status
+812  sshd     /usr/sbin/sshd  readdir  0x55a1c0204038  0x7f9a12001120  /tmp/libhook.so         SUSPICIOUS
+```
+
+---
+
+### `linux_route_cache` (`RouteCache`)
+Walks the Linux kernel IPv4 FIB routing trie (`init_net.ipv4.fib_table_hash` → `fib_table` → `key_vector`) to extract destination networks, prefix lengths, gateways, interfaces, route types, and scopes.
+
+**Examples:**
+```bash
+vol -p plugins -f linux.lime linux_route_cache.RouteCache
+```
+
+**Example output:**
+```text
+Table  Destination  PrefixLen  Gateway      Interface  Type     Scope
+main   0.0.0.0      0          192.168.1.1  eth0       UNICAST  UNIVERSE
+main   192.168.1.0  24         0.0.0.0      eth0       UNICAST  LINK
 ```
 
 ---

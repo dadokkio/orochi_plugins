@@ -107,12 +107,18 @@
 ## [orochi_plugins](https://github.com/dadokkio/orochi_plugins)
 
 - [🪟](apihooks.zip) [apihooks](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Detects user-mode inline API hooks (JMP/CALL/trampolines) in exported DLL functions
+- [🪟](clipboard.zip) [clipboard](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Extracts Windows clipboard formats and text content from tagWINDOWSTATION structures
+- [🪟](idt.zip) [idt](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Displays Windows CPU Interrupt Descriptor Table (IDT) entries and flags unknown handlers
 - [🐧](linux_arp.zip) [linux_arp](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Extracts the Linux kernel IPv4 ARP/neighbor cache from arp_tbl
 - [🐧](linux_check_fop.zip) [linux_check_fop](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Audits Linux file_operations/proc_ops pointers on /proc and open files for rootkit hooks
+- [🐧](linux_plthook.zip) [linux_plthook](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Detects Linux userland ELF64 GOT/PLT hooks pointing to anonymous, unmapped, or suspicious VMAs
+- [🐧](linux_route_cache.zip) [linux_route_cache](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Extracts IPv4 routing table entries from the Linux kernel FIB trie (init_net)
+- [🪟](messagehooks.zip) [messagehooks](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Lists Windows desktop message hooks (SetWindowsHookEx) to detect keyloggers and DLL injection
 - [🪟](screenshot.zip) [screenshot](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Generates wireframe PNG screenshots of Windows desktops from tagWND structures
 - [🪟](shellbags.zip) [shellbags](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Parses BagMRU Shell Items from UsrClass.dat and NTUSER.DAT registry hives
 - [🪟](shutdowntime.zip) [shutdowntime](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Extracts the last Windows shutdown timestamp from the SYSTEM registry hive
 - [🪟](token_stealing.zip) [token_stealing](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Detects Windows kernel token stealing and unexpected SYSTEM _TOKEN sharing
+- [🪟](usnjrnl.zip) [usnjrnl](https://github.com/dadokkio/orochi_plugins) - [2026-11-23] Carves and parses NTFS USN_RECORD_V2 journal entries from physical memory
 
 ## [Rifqi Ramadhan](https://github.com/spitfirerxf)
 
