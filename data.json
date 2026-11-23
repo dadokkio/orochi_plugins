@@ -25,6 +25,22 @@
             "Linux"
         ],
         [
+            "Airbus CERT",
+            "scrings",
+            "https://github.com/airbus-cert/scrings/blob/main/volatility/scrings.py",
+            "scrings.zip",
+            "",
+            ""
+        ],
+        [
+            "Airbus CERT",
+            "vadscrings",
+            "https://github.com/airbus-cert/scrings/blob/main/volatility/vadscrings.py",
+            "vadscrings.zip",
+            "",
+            "Windows"
+        ],
+        [
             "Asaf Eitani",
             "eBPF Programs",
             "https://github.com/AsafEitani/ebpf_programs_plugin",
@@ -38,7 +54,7 @@
             "https://github.com/memoryforensics1/Vol3xp",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "Aviel Zohar and Or Chechik",
@@ -46,7 +62,7 @@
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/listpackers.py",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "Aviel Zohar and Or Chechik",
@@ -54,7 +70,7 @@
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/masqueradeprocess.py",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "Aviel Zohar and Or Chechik",
@@ -62,7 +78,7 @@
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/directsyscalls.py",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "Aviel Zohar and Or Chechik",
@@ -70,7 +86,7 @@
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/apihash.py",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "BoB10th-BTC",
@@ -84,7 +100,15 @@
             "daddycocoaman",
             "dumpcerts",
             "https://github.com/daddycocoaman/volplugins/blob/main/plugins/dumpcerts.py",
+            "dumpcerts.zip",
             "",
+            "Windows"
+        ],
+        [
+            "daddycocoaman",
+            "pypykatz",
+            "https://github.com/daddycocoaman/volplugins/blob/main/plugins/pypykatz.py",
+            "daddycocoaman_pypykatz.zip",
             "",
             "Windows"
         ],
@@ -92,9 +116,17 @@
             "daddycocoaman",
             "symcrypt",
             "https://github.com/daddycocoaman/volplugins/blob/main/plugins/symcrypt.py",
-            "",
+            "symcrypt.zip",
             "",
             "Windows"
+        ],
+        [
+            "Daniel Baier (monkeywave)",
+            "XFRM Inspector",
+            "https://github.com/monkeywave/XFRM-Inspector",
+            "",
+            "",
+            "Linux"
         ],
         [
             "f-block",
@@ -162,6 +194,30 @@
         ],
         [
             "forensicxlab",
+            "anydesk",
+            "https://github.com/forensicxlab/volatility3_plugins/blob/main/anydesk.py",
+            "anydesk.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "forensicxlab",
+            "inodes",
+            "https://github.com/forensicxlab/volatility3_plugins/blob/main/inodes.py",
+            "inodes.zip",
+            "",
+            "Linux"
+        ],
+        [
+            "forensicxlab",
+            "keepass",
+            "https://github.com/forensicxlab/volatility3_plugins/blob/main/keepass.py",
+            "keepass.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "forensicxlab",
             "mftscan",
             "https://github.com/forensicxlab/volatility3/blob/feature/ADS/volatility3/framework/plugins/windows/mftscan.py",
             "",
@@ -170,11 +226,11 @@
         ],
         [
             "forensicxlab",
-            "keepas",
-            "https://github.com/forensicxlab/volatility3_plugins/blob/main/keepass.py",
+            "prefetch",
+            "https://github.com/forensicxlab/volatility3_plugins/blob/main/prefetch.py",
+            "prefetch.zip",
             "",
-            "",
-            ""
+            "Windows"
         ],
         [
             "forensicxlab",
@@ -190,7 +246,39 @@
             "https://github.com/fox-it/OpenSSH-Session-Key-Recovery/tree/main/volatility3",
             "",
             "",
+            "Linux"
+        ],
+        [
+            "Gerhart",
+            "Hyper-V",
+            "https://github.com/volatilityfoundation/community3/tree/master/Gerhart_Hyper_V",
+            "",
+            "",
+            "Windows"
+        ],
+        [
+            "HalaAli198",
+            "Python Runtime Analysis",
+            "https://github.com/HalaAli198/Volatility-3-Plugins-for-Python-Runtime-Analysis",
+            "",
+            "",
             ""
+        ],
+        [
+            "its-radio",
+            "chrome_hx",
+            "https://github.com/its-radio/volatility_plugins/tree/main/chrome_hx",
+            "chrome_hx.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "jpc-cert",
+            "etw-scan",
+            "https://github.com/JPCERTCC/etw-scan/blob/main/plugins/etwscan.py",
+            "",
+            "",
+            "Windows"
         ],
         [
             "jpc-cert",
@@ -201,12 +289,36 @@
             "Windows"
         ],
         [
+            "Kartik Iyer & Parag Rughani",
+            "APCWatch",
+            "https://github.com/KartikIyerr/APCWatch-and-MalAPC/blob/main/apcwatch.py",
+            "apcwatch.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "Kartik Iyer & Parag Rughani",
+            "MalAPC",
+            "https://github.com/KartikIyerr/APCWatch-and-MalAPC/blob/main/malapc.py",
+            "malapc.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "Kartik Iyer & Parag Rughani",
+            "TlsCheck",
+            "https://github.com/KartikIyerr/TlsCheck",
+            "",
+            "",
+            "Windows"
+        ],
+        [
             "kevthehermit",
             "cobaltstrike",
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/cobaltstrike",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "kevthehermit",
@@ -214,7 +326,7 @@
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/passwordmanagers",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "kevthehermit",
@@ -222,7 +334,7 @@
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/richheader",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "kevthehermit",
@@ -230,26 +342,26 @@
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/zone-identifier",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
-            "kevthehermit",
+            "Moreira",
             "mountinfo",
             "https://github.com/volatilityfoundation/community3/tree/master/Moreira_Mountinfo/vol3_mountinfo_plugin_files/volatility/framework",
             "",
             "",
-            ""
+            "Linux"
         ],
         [
-            "kevthehermit",
+            "Moreira",
             "netfilter",
             "https://github.com/volatilityfoundation/community3/tree/master/Moreira_Netfilter",
             "",
             "",
-            ""
+            "Linux"
         ],
         [
-            "kevthehermit",
+            "@oshaked1-@amir9339",
             "docker",
             "https://github.com/amir9339/volatility-docker",
             "",
@@ -262,7 +374,7 @@
             "https://github.com/orchechik/check_spoof",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
             "Rifqi Ramadhan",
@@ -297,7 +409,7 @@
             "Windows"
         ],
         [
-            "Rifqi Ramadhan",
+            "Silva",
             "multi-yara",
             "https://github.com/volatilityfoundation/community3/tree/master/Silva_Multi_Yara",
             "",
@@ -313,23 +425,23 @@
             "Windows"
         ],
         [
-            "skelsec",
+            "Stelte",
             "evtx",
             "https://github.com/volatilityfoundation/community3/tree/master/Stelte_Evtx",
             "",
             "",
-            ""
+            "Windows"
         ],
         [
-            "skelsec",
+            "Stelte",
             "syslog",
             "https://github.com/volatilityfoundation/community3/tree/master/Stelte_Syslog",
             "",
             "",
-            ""
+            "Linux"
         ],
         [
-            "Telundus-CSIRT",
+            "Telindus-CSIRT",
             "Volatility3-autoruns",
             "https://github.com/Telindus-CSIRT/volatility3-autoruns",
             "autorun.zip",
