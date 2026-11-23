@@ -104,6 +104,16 @@
 
 - [🪟]() [check_spoof](https://github.com/orchechik/check_spoof)
 
+## [orochi_plugins](https://github.com/dadokkio/orochi_plugins)
+
+- [🪟](apihooks.zip) [apihooks](https://github.com/dadokkio/orochi_plugins)
+- [🐧](linux_arp.zip) [linux_arp](https://github.com/dadokkio/orochi_plugins)
+- [🐧](linux_check_fop.zip) [linux_check_fop](https://github.com/dadokkio/orochi_plugins)
+- [🪟](screenshot.zip) [screenshot](https://github.com/dadokkio/orochi_plugins)
+- [🪟](shellbags.zip) [shellbags](https://github.com/dadokkio/orochi_plugins)
+- [🪟](shutdowntime.zip) [shutdowntime](https://github.com/dadokkio/orochi_plugins)
+- [🪟](token_stealing.zip) [token_stealing](https://github.com/dadokkio/orochi_plugins)
+
 ## [Rifqi Ramadhan](https://github.com/spitfirerxf)
 
 - [🪟](notepad.zip) [notepad](https://github.com/spitfirerxf/vol3-plugins/blob/main/notepad.py)

@@ -377,6 +377,62 @@
             "Windows"
         ],
         [
+            "orochi_plugins",
+            "apihooks",
+            "https://github.com/dadokkio/orochi_plugins",
+            "apihooks.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "orochi_plugins",
+            "linux_arp",
+            "https://github.com/dadokkio/orochi_plugins",
+            "linux_arp.zip",
+            "",
+            "Linux"
+        ],
+        [
+            "orochi_plugins",
+            "linux_check_fop",
+            "https://github.com/dadokkio/orochi_plugins",
+            "linux_check_fop.zip",
+            "",
+            "Linux"
+        ],
+        [
+            "orochi_plugins",
+            "screenshot",
+            "https://github.com/dadokkio/orochi_plugins",
+            "screenshot.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "orochi_plugins",
+            "shellbags",
+            "https://github.com/dadokkio/orochi_plugins",
+            "shellbags.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "orochi_plugins",
+            "shutdowntime",
+            "https://github.com/dadokkio/orochi_plugins",
+            "shutdowntime.zip",
+            "",
+            "Windows"
+        ],
+        [
+            "orochi_plugins",
+            "token_stealing",
+            "https://github.com/dadokkio/orochi_plugins",
+            "token_stealing.zip",
+            "",
+            "Windows"
+        ],
+        [
             "Rifqi Ramadhan",
             "notepad",
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/notepad.py",
