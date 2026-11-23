@@ -35,7 +35,17 @@ with open("README.md", "r", encoding="utf-8") as f:
                 os_name = OS_MAP.get(os_icon.strip(), "")
                 plugin_name, url = links[1]
 
-            data.append([name, plugin_name.strip(), url.strip(), down.strip(), "", os_name])
+            # Extract trailing description after the last markdown link
+            matches = list(LINK_RE.finditer(line))
+            trailing = line[matches[-1].end() :].strip()
+            if trailing.startswith("- "):
+                trailing = trailing[2:].strip()
+            elif trailing.startswith("— "):
+                trailing = trailing[2:].strip()
+            # Clean lightweight markdown formatting (*...* / `...`) for plain-text data.json
+            desc = trailing.replace("`", "").strip()
+
+            data.append([name, plugin_name.strip(), url.strip(), down.strip(), desc, os_name])
 
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump({"data": data}, f, indent=4, sort_keys=True)

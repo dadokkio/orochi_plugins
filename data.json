@@ -5,7 +5,7 @@
             "check_ftrace",
             "https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_ftrace.py",
             "check_ftrace.zip",
-            "",
+            "[2025-02-09] Detects Linux ftrace kernel hooks (built-in in Volatility 3: linux.tracing.ftrace)",
             "Linux"
         ],
         [
@@ -13,7 +13,7 @@
             "check_tracepoints",
             "https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_tracepoints.py",
             "check_tracepoints.zip",
-            "",
+            "[2025-02-09] Detects hooked Linux kernel tracepoints (built-in in Volatility 3: linux.tracing.tracepoints)",
             "Linux"
         ],
         [
@@ -21,7 +21,7 @@
             "check_unlinked_modules",
             "https://github.com/Abyss-W4tcher/volatility-scripts/blob/master/Volatility_contest_2023/plugins/check_unlinked_modules.py",
             "check_unlinked_modules.zip",
-            "",
+            "[2025-02-09] Finds hidden/unlinked Linux kernel modules (built-in in Volatility 3: linux.hidden_modules)",
             "Linux"
         ],
         [
@@ -29,7 +29,7 @@
             "scrings",
             "https://github.com/airbus-cert/scrings/blob/main/volatility/scrings.py",
             "scrings.zip",
-            "",
+            "[2025-02-19] Extracts semantically valid script/code strings from memory using tree-sitter",
             ""
         ],
         [
@@ -37,7 +37,7 @@
             "vadscrings",
             "https://github.com/airbus-cert/scrings/blob/main/volatility/vadscrings.py",
             "vadscrings.zip",
-            "",
+            "[2025-02-19] Scans Windows process VADs for semantically valid script/code strings via scrings",
             "Windows"
         ],
         [
@@ -45,7 +45,7 @@
             "eBPF Programs",
             "https://github.com/AsafEitani/ebpf_programs_plugin",
             "ebpf_programs.zip",
-            "",
+            "[2023-07-19] Lists loaded Linux eBPF programs (built-in in Volatility 3: linux.ebpf)",
             "Linux"
         ],
         [
@@ -53,7 +53,7 @@
             "vol3xp",
             "https://github.com/memoryforensics1/Vol3xp",
             "",
-            "",
+            "[2023-01-03] Interactive memory forensics explorer and analysis helper for Volatility 3",
             "Windows"
         ],
         [
@@ -61,7 +61,7 @@
             "PackerList",
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/listpackers.py",
             "",
-            "",
+            "[2024-01-09] Identifies packed PE binaries in Windows process memory",
             "Windows"
         ],
         [
@@ -69,7 +69,7 @@
             "MasqueradeProcess",
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/masqueradeprocess.py",
             "",
-            "",
+            "[2024-01-09] Detects process masquerading by comparing PEB and EPROCESS paths/names",
             "Windows"
         ],
         [
@@ -77,7 +77,7 @@
             "DirectSyscalls",
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/directsyscalls.py",
             "",
-            "",
+            "[2024-01-09] Detects direct syscall stubs used to bypass user-mode EDR hooks",
             "Windows"
         ],
         [
@@ -85,7 +85,7 @@
             "ApiHash",
             "https://github.com/memoryforensics1/Volatility.PE-Shellcode/blob/main/apihash.py",
             "",
-            "",
+            "[2024-01-09] Detects API hashing shellcode patterns in process memory",
             "Windows"
         ],
         [
@@ -93,7 +93,7 @@
             "CryptoScan",
             "https://github.com/BoB10th-BTC/CryptoScan",
             "",
-            "",
+            "[2021-12-16] Scans Windows memory for cryptocurrency wallet artifacts and keys",
             "Windows"
         ],
         [
@@ -101,7 +101,7 @@
             "dumpcerts",
             "https://github.com/daddycocoaman/volplugins/blob/main/plugins/dumpcerts.py",
             "dumpcerts.zip",
-            "",
+            "[2023-03-22] Carves X.509 certificates and private keys from Windows memory",
             "Windows"
         ],
         [
@@ -109,7 +109,7 @@
             "pypykatz",
             "https://github.com/daddycocoaman/volplugins/blob/main/plugins/pypykatz.py",
             "daddycocoaman_pypykatz.zip",
-            "",
+            "[2023-03-22] Extracts Windows credentials from LSASS using pypykatz (updated Vol3 fork)",
             "Windows"
         ],
         [
@@ -117,7 +117,7 @@
             "symcrypt",
             "https://github.com/daddycocoaman/volplugins/blob/main/plugins/symcrypt.py",
             "symcrypt.zip",
-            "",
+            "[2023-03-22] Extracts Windows SymCrypt RSA private keys from memory",
             "Windows"
         ],
         [
@@ -125,7 +125,7 @@
             "XFRM Inspector",
             "https://github.com/monkeywave/XFRM-Inspector",
             "",
-            "",
+            "[2025-12-21] Recovers Linux IPsec XFRM Security Associations, policies, and encryption keys",
             "Linux"
         ],
         [
@@ -133,7 +133,7 @@
             "apisearch",
             "https://github.com/f-block/volatility-plugins/blob/main/apisearch.py",
             "",
-            "",
+            "[2025-04-22] Searches Windows memory for API references and call targets",
             "Windows"
         ],
         [
@@ -141,7 +141,7 @@
             "imgmalfind",
             "https://github.com/f-block/volatility-plugins/blob/main/imgmalfind.py",
             "",
-            "",
+            "[2025-04-22] Detects maliciously modified or injected PE image sections",
             "Windows"
         ],
         [
@@ -149,7 +149,7 @@
             "pe_parser",
             "https://github.com/f-block/volatility-plugins/blob/main/pe_parser.py",
             "",
-            "",
+            "[2025-04-22] Parses PE headers and structures from process memory",
             "Windows"
         ],
         [
@@ -157,7 +157,7 @@
             "pte_resolve",
             "https://github.com/f-block/volatility-plugins/blob/main/pte_resolve.py",
             "",
-            "",
+            "[2025-04-22] Resolves virtual addresses via Windows Page Table Entries (PTEs)",
             "Windows"
         ],
         [
@@ -165,7 +165,7 @@
             "ptemalfind",
             "https://github.com/f-block/volatility-plugins/blob/main/ptemalfind.py",
             "",
-            "",
+            "[2025-04-22] Detects code injection by inspecting executable Page Table Entries (PTEs)",
             "Windows"
         ],
         [
@@ -173,7 +173,7 @@
             "ptenum",
             "https://github.com/f-block/volatility-plugins/blob/main/ptenum.py",
             "",
-            "",
+            "[2025-04-22] Enumerates Windows Page Table Entries (PTEs) for processes",
             "Windows"
         ],
         [
@@ -181,7 +181,7 @@
             "simple_pteenum",
             "https://github.com/f-block/volatility-plugins/blob/main/simple_pteenum.py",
             "",
-            "",
+            "[2025-04-22] Lightweight Page Table Entry (PTE) enumerator for Windows processes",
             "Windows"
         ],
         [
@@ -189,7 +189,7 @@
             "swap_enum",
             "https://github.com/f-block/volatility-plugins/blob/main/swap_enum.py",
             "",
-            "",
+            "[2025-04-22] Enumerates paged-out / swap-backed memory pages via PTEs",
             "Windows"
         ],
         [
@@ -197,7 +197,7 @@
             "anydesk",
             "https://github.com/forensicxlab/volatility3_plugins/blob/main/anydesk.py",
             "anydesk.zip",
-            "",
+            "[2026-10-18] Extracts AnyDesk remote-access session logs and artifacts from memory",
             "Windows"
         ],
         [
@@ -205,7 +205,7 @@
             "inodes",
             "https://github.com/forensicxlab/volatility3_plugins/blob/main/inodes.py",
             "inodes.zip",
-            "",
+            "[2026-10-18] Lists Linux inodes, permissions, and timestamps from memory",
             "Linux"
         ],
         [
@@ -213,7 +213,7 @@
             "keepass",
             "https://github.com/forensicxlab/volatility3_plugins/blob/main/keepass.py",
             "keepass.zip",
-            "",
+            "[2026-10-18] Extracts KeePass master password artifacts (CVE-2023-32784) from memory",
             "Windows"
         ],
         [
@@ -221,7 +221,7 @@
             "mftscan",
             "https://github.com/forensicxlab/volatility3/blob/feature/ADS/volatility3/framework/plugins/windows/mftscan.py",
             "",
-            "",
+            "[2026-10-19] Scans memory for NTFS MFT records and ADS (built-in in Volatility 3: windows.mftscan)",
             "Windows"
         ],
         [
@@ -229,7 +229,7 @@
             "prefetch",
             "https://github.com/forensicxlab/volatility3_plugins/blob/main/prefetch.py",
             "prefetch.zip",
-            "",
+            "[2026-10-18] Recovers and parses Windows Prefetch (.pf) execution artifacts from memory",
             "Windows"
         ],
         [
@@ -237,7 +237,7 @@
             "Import Address Table",
             "https://github.com/forensicxlab/volatility3/tree/feature/IAT",
             "",
-            "",
+            "[2026-10-19] Extracts PE Import Address Tables (built-in in Volatility 3: windows.iat)",
             "Windows"
         ],
         [
@@ -245,7 +245,7 @@
             "openssh_sessionkeys",
             "https://github.com/fox-it/OpenSSH-Session-Key-Recovery/tree/main/volatility3",
             "",
-            "",
+            "[2024-05-22] Recovers OpenSSH session encryption keys from Linux memory",
             "Linux"
         ],
         [
@@ -253,7 +253,7 @@
             "Hyper-V",
             "https://github.com/volatilityfoundation/community3/tree/master/Gerhart_Hyper_V",
             "",
-            "",
+            "[2023-03-19] Analyzes Microsoft Hyper-V virtual machine structures in memory",
             "Windows"
         ],
         [
@@ -261,7 +261,7 @@
             "Python Runtime Analysis",
             "https://github.com/HalaAli198/Volatility-3-Plugins-for-Python-Runtime-Analysis",
             "",
-            "",
+            "[2026-06-13] Inspects Python classes, modules, bytecode, and stack variables in Windows/Linux memory",
             ""
         ],
         [
@@ -269,7 +269,7 @@
             "chrome_hx",
             "https://github.com/its-radio/volatility_plugins/tree/main/chrome_hx",
             "chrome_hx.zip",
-            "",
+            "[2025-05-17] Carves and parses Google Chrome SQLite browsing history directly from RAM",
             "Windows"
         ],
         [
@@ -277,7 +277,7 @@
             "etw-scan",
             "https://github.com/JPCERTCC/etw-scan/blob/main/plugins/etwscan.py",
             "",
-            "",
+            "[2024-11-15] Scans Event Tracing for Windows (ETW) sessions and recovers unflushed ETL events",
             "Windows"
         ],
         [
@@ -285,7 +285,7 @@
             "Impfuzzy",
             "https://github.com/JPCERTCC/impfuzzy/tree/master/impfuzzy_for_Volatility3",
             "pehash.zip",
-            "",
+            "[2022-08-26] Computes ImpHash, ImpFuzzy, and SSDEEP hashes for loaded Windows PE binaries",
             "Windows"
         ],
         [
@@ -293,7 +293,7 @@
             "APCWatch",
             "https://github.com/KartikIyerr/APCWatch-and-MalAPC/blob/main/apcwatch.py",
             "apcwatch.zip",
-            "",
+            "[2026-10-25] Enumerates and baselines Windows Asynchronous Procedure Calls (APCs)",
             "Windows"
         ],
         [
@@ -301,7 +301,7 @@
             "MalAPC",
             "https://github.com/KartikIyerr/APCWatch-and-MalAPC/blob/main/malapc.py",
             "malapc.zip",
-            "",
+            "[2026-10-25] Detects malicious APC injection and suspicious queued APC routines",
             "Windows"
         ],
         [
@@ -309,7 +309,7 @@
             "TlsCheck",
             "https://github.com/KartikIyerr/TlsCheck",
             "",
-            "",
+            "[2025-04-26] Detects and analyzes Thread Local Storage (TLS) callbacks in PE binaries",
             "Windows"
         ],
         [
@@ -317,7 +317,7 @@
             "cobaltstrike",
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/cobaltstrike",
             "",
-            "",
+            "[2023-07-22] Detects Cobalt Strike beacons and extracts C2 configurations from memory",
             "Windows"
         ],
         [
@@ -325,7 +325,7 @@
             "passwordmanagers",
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/passwordmanagers",
             "",
-            "",
+            "[2023-07-22] Extracts password manager vaults and credentials from Windows memory",
             "Windows"
         ],
         [
@@ -333,7 +333,7 @@
             "richheader",
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/richheader",
             "",
-            "",
+            "[2023-07-22] Extracts and hashes PE Rich Headers from loaded Windows modules",
             "Windows"
         ],
         [
@@ -341,7 +341,7 @@
             "zone-identifier",
             "https://github.com/kevthehermit/volatility_plugins/tree/main/vol3/zone-identifier",
             "",
-            "",
+            "[2023-07-22] Recovers Mark-of-the-Web (Zone.Identifier) ADS artifacts from memory",
             "Windows"
         ],
         [
@@ -349,7 +349,7 @@
             "mountinfo",
             "https://github.com/volatilityfoundation/community3/tree/master/Moreira_Mountinfo/vol3_mountinfo_plugin_files/volatility/framework",
             "",
-            "",
+            "[2023-03-19] Lists Linux mount namespaces and mount points (built-in in Volatility 3: linux.mountinfo)",
             "Linux"
         ],
         [
@@ -357,7 +357,7 @@
             "netfilter",
             "https://github.com/volatilityfoundation/community3/tree/master/Moreira_Netfilter",
             "",
-            "",
+            "[2023-03-19] Inspects Linux netfilter hooks (built-in in Volatility 3: linux.netfilter)",
             "Linux"
         ],
         [
@@ -365,7 +365,7 @@
             "docker",
             "https://github.com/amir9339/volatility-docker",
             "",
-            "",
+            "[2024-01-10] Identifies Docker containers, cgroups, and namespaces in Linux memory",
             "Linux"
         ],
         [
@@ -373,7 +373,7 @@
             "check_spoof",
             "https://github.com/orchechik/check_spoof",
             "",
-            "",
+            "[2023-05-02] Detects PPID and process parameter spoofing in Windows memory",
             "Windows"
         ],
         [
@@ -381,7 +381,7 @@
             "apihooks",
             "https://github.com/dadokkio/orochi_plugins",
             "apihooks.zip",
-            "",
+            "[2026-11-23] Detects user-mode inline API hooks (JMP/CALL/trampolines) in exported DLL functions",
             "Windows"
         ],
         [
@@ -389,7 +389,7 @@
             "linux_arp",
             "https://github.com/dadokkio/orochi_plugins",
             "linux_arp.zip",
-            "",
+            "[2026-11-23] Extracts the Linux kernel IPv4 ARP/neighbor cache from arp_tbl",
             "Linux"
         ],
         [
@@ -397,7 +397,7 @@
             "linux_check_fop",
             "https://github.com/dadokkio/orochi_plugins",
             "linux_check_fop.zip",
-            "",
+            "[2026-11-23] Audits Linux file_operations/proc_ops pointers on /proc and open files for rootkit hooks",
             "Linux"
         ],
         [
@@ -405,7 +405,7 @@
             "screenshot",
             "https://github.com/dadokkio/orochi_plugins",
             "screenshot.zip",
-            "",
+            "[2026-11-23] Generates wireframe PNG screenshots of Windows desktops from tagWND structures",
             "Windows"
         ],
         [
@@ -413,7 +413,7 @@
             "shellbags",
             "https://github.com/dadokkio/orochi_plugins",
             "shellbags.zip",
-            "",
+            "[2026-11-23] Parses BagMRU Shell Items from UsrClass.dat and NTUSER.DAT registry hives",
             "Windows"
         ],
         [
@@ -421,7 +421,7 @@
             "shutdowntime",
             "https://github.com/dadokkio/orochi_plugins",
             "shutdowntime.zip",
-            "",
+            "[2026-11-23] Extracts the last Windows shutdown timestamp from the SYSTEM registry hive",
             "Windows"
         ],
         [
@@ -429,7 +429,7 @@
             "token_stealing",
             "https://github.com/dadokkio/orochi_plugins",
             "token_stealing.zip",
-            "",
+            "[2026-11-23] Detects Windows kernel token stealing and unexpected SYSTEM _TOKEN sharing",
             "Windows"
         ],
         [
@@ -437,7 +437,7 @@
             "notepad",
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/notepad.py",
             "notepad.zip",
-            "",
+            "[2026-06-18] Recovers unsaved text content from Windows Notepad process memory",
             "Windows"
         ],
         [
@@ -445,7 +445,7 @@
             "kusertime",
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/kusertime.py",
             "",
-            "",
+            "[2026-06-18] Extracts system time from Windows KUSER_SHARED_DATA",
             "Windows"
         ],
         [
@@ -453,7 +453,7 @@
             "evtxlog",
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/evtxlog.py",
             "",
-            "",
+            "[2026-06-18] Carves Windows EVTX event log chunks from memory",
             "Windows"
         ],
         [
@@ -461,7 +461,7 @@
             "sticky",
             "https://github.com/spitfirerxf/vol3-plugins/blob/main/sticky.py",
             "",
-            "",
+            "[2026-06-18] Recovers Windows Sticky Notes content from memory",
             "Windows"
         ],
         [
@@ -469,7 +469,7 @@
             "multi-yara",
             "https://github.com/volatilityfoundation/community3/tree/master/Silva_Multi_Yara",
             "",
-            "",
+            "[2023-03-19] Runs multiple YARA rulesets concurrently across Windows memory",
             "Windows"
         ],
         [
@@ -477,7 +477,7 @@
             "pypykatz",
             "https://github.com/skelsec/pypykatz-volatility3",
             "pypykatz.zip",
-            "",
+            "[2025-05-30] Extracts Windows credentials, NTLM hashes, and Kerberos tickets from LSASS via pypykatz",
             "Windows"
         ],
         [
@@ -485,7 +485,7 @@
             "evtx",
             "https://github.com/volatilityfoundation/community3/tree/master/Stelte_Evtx",
             "",
-            "",
+            "[2023-03-19] Extracts and parses Windows Event Logs (EVTX) from memory",
             "Windows"
         ],
         [
@@ -493,7 +493,7 @@
             "syslog",
             "https://github.com/volatilityfoundation/community3/tree/master/Stelte_Syslog",
             "",
-            "",
+            "[2023-03-19] Recovers Linux syslog messages from memory",
             "Linux"
         ],
         [
@@ -501,7 +501,7 @@
             "Volatility3-autoruns",
             "https://github.com/Telindus-CSIRT/volatility3-autoruns",
             "autorun.zip",
-            "",
+            "[2022-04-27] Enumerates Windows persistence mechanisms (Run keys, services, tasks, AppInit, Winlogon)",
             "Windows"
         ],
         [
@@ -509,7 +509,7 @@
             "bpf_graph",
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_graph.py",
             "",
-            "",
+            "[2024-01-19] Generates a relationship graph of Linux eBPF programs, maps, links, and processes",
             "Linux"
         ],
         [
@@ -517,7 +517,7 @@
             "bpf_listlinks",
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listlinks.py",
             "",
-            "",
+            "[2024-01-19] Lists active Linux eBPF links in kernel memory",
             "Linux"
         ],
         [
@@ -525,7 +525,7 @@
             "bpf_listmaps",
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listmaps.py",
             "",
-            "",
+            "[2024-01-19] Lists Linux eBPF maps and metadata from kernel memory",
             "Linux"
         ],
         [
@@ -533,7 +533,7 @@
             "bpf_listprocs",
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listprocs.py",
             "",
-            "",
+            "[2024-01-19] Lists Linux processes holding open eBPF file descriptors",
             "Linux"
         ],
         [
@@ -541,7 +541,7 @@
             "bpf_listprogs",
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_listprogs.py",
             "",
-            "",
+            "[2024-01-19] Lists loaded Linux eBPF programs and details from kernel memory",
             "Linux"
         ],
         [
@@ -549,7 +549,7 @@
             "bpf_lsm",
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_lsm.py",
             "",
-            "",
+            "[2024-01-19] Inspects Linux eBPF LSM (Linux Security Modules) hooks",
             "Linux"
         ],
         [
@@ -557,7 +557,7 @@
             "bpf_netdev",
             "https://github.com/vobst/BPFVol3/blob/main/src/plugins/bpf_netdev.py",
             "",
-            "",
+            "[2024-01-19] Lists eBPF programs attached to Linux network devices (XDP/TC)",
             "Linux"
         ]
     ]
